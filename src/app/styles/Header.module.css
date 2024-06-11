@@ -1,0 +1,21 @@
+.header {
+    background: rgb(44,54,85);
+    background: linear-gradient(90deg, rgba(44,54,85,1) 28%, rgba(24,36,55,1) 75%);
+}
+
+.brandName {
+    font-family: 'SpartanRegular';
+    font-weight: normal;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: -2px 2px 2px #FE5F55;
+}
+
+.navTxt {
+    font-family: 'RalewayBold';
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.6rem;
+    color: #FE5F55;
+}

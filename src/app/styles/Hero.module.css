@@ -1,0 +1,30 @@
+.main {
+    /* background-color: #EEF8FF; */
+    height: 90vh;
+    background: linear-gradient(180deg, #f0f4f8 0%, #d9e2ec 100%);
+    position: relative;
+}
+
+.heroName {
+    font-family: 'RalewayRegular';
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.heroTxt {
+    font-family: 'RalewayRegular';
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.imgContainer {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid #FE5F55;
+    box-shadow: 0 0 20px #FE5F55;
+}
