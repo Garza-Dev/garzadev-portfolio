@@ -6,7 +6,7 @@ import styles from '@/app/styles/Hero.module.css';
 const Hero: React.FC = () => {
     return (
         <main className={styles.main}>
-            <div className=" mx-auto flex flex-col md:flex-row items-center p-8">
+            <div className="mx-auto flex flex-col md:flex-row items-center p-8">
                 <div className="flex-1 md:pr-8">
                     <div className={styles.heroName}>Eduardo Garza</div>
                     <svg width="100%" height="2.4" viewBox="0 0 100 2" preserveAspectRatio="none">
