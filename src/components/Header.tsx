@@ -8,18 +8,18 @@ const Header: React.FC = () => {
                 Garza-Dev
             </div>
             <nav className='flex justify-end px-8'>
-                <ul className='flex space-x-9'>
+                <ul className='flex space-x-15'>
                     <li>
-                        <Link href="/about" className={`${styles.navTxt} font-semibold`}> About Me </Link>
+                        <Link href="/about" className={styles.navTxt}><span>About Me</span></Link>
                     </li>
                     <li>
-                        <Link href="/projects" className={`${styles.navTxt} font-semibold`}>Projects</Link>
+                        <Link href="/projects" className={styles.navTxt}><span>Projects</span></Link>
                     </li>
                     <li>
-                        <Link href="/contact" className={`${styles.navTxt} font-semibold`}>Contact</Link>
+                        <Link href="/contact" className={styles.navTxt}><span>Contact</span></Link>
                     </li>
                     <li>
-                        <Link href="/resume" className={`${styles.navTxt} font-semibold`}>Resume</Link>
+                        <Link href="/resume" className={styles.navTxt}><span>Resume</span></Link>
                     </li>
                 </ul>
             </nav>
