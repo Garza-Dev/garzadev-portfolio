@@ -6,7 +6,7 @@ import Waves from '../Waves/Waves';
 
 const Hero: React.FC = () => {
     return (
-        <section className={styles.main}>
+        <section className={styles.hero}>
             <div className="mx-auto flex flex-col md:flex-row items-center p-8">
                 <div className="flex-1 md:pr-8">
                     <div className={styles.heroName}>Eduardo Garza</div>
