@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import Head from "next/head";
 
@@ -26,7 +26,7 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <div className='sticky top-0' style={{ zIndex: 10 }}>
-          <Header />
+          <Navbar />
         </div>
         {children}
       </body>

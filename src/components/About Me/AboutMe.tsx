@@ -1,4 +1,4 @@
-import styles from '@/app/styles/AboutMe.module.css';
+import styles from './AboutMe.module.css';
 
 const AboutMe: React.FC = () => {
     return (

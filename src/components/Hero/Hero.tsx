@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import EduardoGarzaIMG from '../../public/Eduardo-Garza.jpg';
-import styles from '@/app/styles/Hero.module.css';
+import EduardoGarzaIMG from '../../../public/Eduardo-Garza.jpg';
+import styles from './Hero.module.css';
+import Waves from '../Waves/Waves';
 
 const Hero: React.FC = () => {
     return (
-        <main className={styles.main}>
+        <section className={styles.main}>
             <div className="mx-auto flex flex-col md:flex-row items-center p-8">
                 <div className="flex-1 md:pr-8">
                     <div className={styles.heroName}>Eduardo Garza</div>
@@ -18,7 +19,9 @@ const Hero: React.FC = () => {
                     <Image src={EduardoGarzaIMG.src} layout='fill' objectFit='cover' className={styles.img} alt='Eduardo Garza' />
                 </div>
             </div>
-        </main>
+
+            <Waves />
+        </section>
     )
 }
 

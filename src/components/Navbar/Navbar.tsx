@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import styles from '@/app/styles/Header.module.css';
+import styles from './Navbar.module.css';
 
-const Header: React.FC = () => {
+const Navbar: React.FC = () => {
     return (
         <header className={`${styles.header} flex justify-between items-center px-4 py-1`} style={{ zIndex: 10 }}>
             <div className={`${styles.brandName} relative py-2`}>
@@ -27,4 +27,4 @@ const Header: React.FC = () => {
     )
 }
 
-export default Header;
+export default Navbar;
