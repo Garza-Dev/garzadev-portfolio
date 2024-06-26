@@ -1,6 +1,7 @@
 .wavesContainer {
-    height: 50px;
+    position: relative;
+    height: 100%;
     width: 100%;
-    margin-top: -45vh;
+    margin-top: -50vh;
     z-index: 1;
 }

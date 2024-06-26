@@ -6,13 +6,13 @@ const Waves = () => {
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
-                viewBox="0 0 2400 800"
+                viewBox="0 0 2400 600"
                 opacity="1"
             >
                 <defs>
-                    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="sssurf-grad">
-                        <stop stopColor="rgb(44,54,85)" stopOpacity="1" offset="0%"></stop>
-                        <stop stopColor="rgb(68,84,141)" stopOpacity="1" offset="100%"></stop>
+                    <linearGradient x1="13%" y1="0%" x2="87%" y2="0%" id="sssurf-grad">
+                        <stop stopColor="rgb(44,54,85)" stopOpacity="1" offset="28%"></stop>
+                        <stop stopColor="rgb(24,36,55)" stopOpacity="1" offset="75%"></stop>
                     </linearGradient>
                 </defs>
                 <g
