@@ -1,6 +1,5 @@
 .hero {
     height: 85vh;
-    padding-bottom: 15%;
     background: linear-gradient(180deg, #f0f4f8 0%, #d9e2ec 100%);
     position: relative;
 }
@@ -20,17 +19,13 @@
 }
 
 .imgContainer {
-    width: 400px;
-    height: 400px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 30rem;
+    height: 30rem;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
     border: 5px solid #FE5F55;
     box-shadow: 0 0 20px #FE5F55;
-}
-
-@media only screen and (max-width: 768px) {
-    .hero {
-        height: 75vh;
-    }
 }
