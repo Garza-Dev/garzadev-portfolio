@@ -3,7 +3,7 @@ import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () => {
     return (
-        <header className={`${styles.header} flex justify-between items-center px-4 py-1`} style={{ zIndex: 10 }}>
+        <section className={`${styles.header} flex justify-between items-center px-4 py-1`}>
             <div className={`${styles.brandName} relative py-2`}>
                 Garza-Dev
             </div>
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
                     </li>
                 </ul>
             </nav>
-        </header>
+        </section>
     )
 }
 

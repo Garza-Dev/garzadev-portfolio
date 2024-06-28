@@ -7,7 +7,7 @@ const Waves = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
                 viewBox="0 0 1200 120"
-                preserveAspectRatio="xMidYMid meet"
+                preserveAspectRatio="none"
             >
                 <defs>
                     <linearGradient x1="14%" y1="0%" x2="51%" y2="0%" id="sssurf-grad">

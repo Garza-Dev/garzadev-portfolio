@@ -28,9 +28,6 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet" />
       </Head>
       <body>
-        <div className='sticky top-0' style={{ zIndex: 10 }}>
-          <Navbar />
-        </div>
         {children}
       </body>
     </html>

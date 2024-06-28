@@ -1,4 +1,9 @@
 .header {
+    height: 10%;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
     background: rgb(44,54,85);
     background: linear-gradient(90deg, rgba(44,54,85,1) 28%, rgba(24,36,55,1) 75%);
 }
@@ -19,7 +24,7 @@
     font-size: 1.2rem;
     color: #fff;
     display: inline-block; /* Ensure transform works correctly */
-    width: 90px; /* Fixed width */
+    width: 10rem; /* Fixed width */
     text-align: center; /* Center text */
 }
 
