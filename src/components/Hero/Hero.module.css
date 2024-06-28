@@ -1,5 +1,5 @@
 .hero {
-    height: 85vh;
+    /* height: 85vh; */
     background: linear-gradient(180deg, #f0f4f8 0%, #d9e2ec 100%);
     position: relative;
 }
