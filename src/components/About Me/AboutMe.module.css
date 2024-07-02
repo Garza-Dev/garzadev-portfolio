@@ -1,18 +1,65 @@
-/* .main {
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    z-index: 2;
-    top: 5rem;
+    background: linear-gradient(90deg, rgba(44,54,85,1) 28%, rgba(24,36,55,1) 75%);
+    z-index: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    text-align: center;
 }
 
 .heading {
     padding: 0.8rem;
     font-size: 4rem;
-    color: #FE5F55;
-} */
-
-.about {
-    background: #000;
+    font-family: 'SpartanRegular';
+    font-weight: normal;
     color: #fff;
-    padding: 50px;
+    text-shadow: -2px 2px 2px #FE5F55;
+    text-align: start;
+}
+
+.iconContainer {
+    margin: 0.8rem;
     position: relative;
+}
+
+.pixelArtTop {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    width: 144px;
+    height: 114px;
+    z-index: 1;
+    transform: rotate(-180deg);
+    position: relative;
+}
+
+.pixelArtBtm {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    width: 144px;
+    height: 114px;
+    position: relative;
+    z-index: 1;
+}
+
+.logosContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2rem;
+    position: relative;
+    z-index: 2;
 }
