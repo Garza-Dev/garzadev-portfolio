@@ -18,19 +18,22 @@ const AboutMe: React.FC = () => {
         sqlLogo.src
     ];
 
+    const rightLogos = [
+        nextjsIcon.src,
+        nodejsIcon.src,
+        unityIcon.src,
+        angularIcon.src
+    ];
+
     return (
         <section className={`${styles.main}`}>
             <div className={`${styles.container} container mx-auto`}>
                 <div className={styles.iconContainer}>
-                    <img className={styles.pixelArtTop} src={iconPipeIMG.src} alt='Icon-Pipe' width={144} height={114} />
+                    {/* <img className={styles.pixelArtTop} src={iconPipeIMG.src} alt='Icon-Pipe' width={144} height={114} /> */}
                     <div className={styles.logosContainer}>
-                        {/* <img className={styles.logo} src={reactIcon.src} alt='ReactIcon' width={105} height={105} />
-                        <img className={styles.logo} src={azureIcon.src} alt='AzureIcon' width={105} height={105} />
-                        <img className={styles.logo} src={godotIcon.src} alt='GodotIcon' width={105} height={105} />
-                        <img className={styles.logo} src={sqlLogo.src} alt='SQLIcon' width={105} height={105} /> */}
-                        <LogoSlider images={leftLogos}/>
+                        <LogoSlider images={leftLogos} side='right'/>
                     </div>
-                    <img className={styles.pixelArtBtm} src={iconPipeIMG.src} alt='Icon-Pipe' width={144} height={114} />
+                    {/* <img className={styles.pixelArtBtm} src={iconPipeIMG.src} alt='Icon-Pipe' width={144} height={114} /> */}
                 </div>
                 <div className={styles.content}>
                     <h1 className={styles.heading}>About Me</h1>
@@ -50,10 +53,7 @@ const AboutMe: React.FC = () => {
                 <div className={styles.iconContainer}>
                     <img className={styles.pixelArtTop} src={iconPipeIMG.src} alt='Icon-Pipe' width={64} height={64} />
                     <div className={styles.logosContainer}>
-                        <img src={nextjsIcon.src} alt='NextJsIcon' width={105} height={105} />
-                        <img src={nodejsIcon.src} alt='NodeJSIcon' width={105} height={105} />
-                        <img src={angularIcon.src} alt='AngularIcon' width={105} height={105} />
-                        <img src={unityIcon.src} alt='UnityIcon' width={105} height={105} />
+                        {/* <LogoSlider images={rightLogos} side='left'/> */}
                     </div>
                     <img className={styles.pixelArtBtm} src={iconPipeIMG.src} alt='Icon-Pipe' width={64} height={64} />
                 </div>

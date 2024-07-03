@@ -5,7 +5,7 @@
     flex-direction: column;
     position: relative;
     background: linear-gradient(90deg, rgba(44,54,85,1) 28%, rgba(24,36,55,1) 75%);
-    z-index: 0;
+    
 }
 
 .container {
@@ -33,6 +33,9 @@
 .iconContainer {
     margin: 0.8rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pixelArtTop {
@@ -40,9 +43,10 @@
     image-rendering: crisp-edges;
     width: 144px;
     height: 114px;
-    z-index: 1;
+    z-index: 0;
     transform: rotate(-180deg);
     position: relative;
+    z-index: 0; /* Ensure this is lower than .logosContainer */
 }
 
 .pixelArtBtm {
@@ -51,15 +55,15 @@
     width: 144px;
     height: 114px;
     position: relative;
-    z-index: 1;
+    z-index: 0; /* Ensure this is lower than .logosContainer */
 }
 
 .logosContainer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    grid-gap: 2rem;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    margin-top: -8px; /* Adjust this value as needed to ensure logos are in front */
+    margin-bottom: -8px;
 }
