@@ -11,14 +11,10 @@ interface LogoSliderProps {
 const LogoSlider: React.FC<LogoSliderProps> = ({ images, side }) => {
     const settings = {
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToShow: 3,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
-        cssEase: "linear",
+        speed: 1200,
         vertical: true,
-        adaptiveHeight: true,
         nextArrow: <></>,
         prevArrow: <></>
     };
@@ -28,8 +24,8 @@ const LogoSlider: React.FC<LogoSliderProps> = ({ images, side }) => {
             <Slider {...settings}>
                 {images.map((src, index) => (
                     <div key={index}>
-                        <img src={src} alt={`${index}-logo`} //Fix this!!! height has to match the icon height
-                            // style={side == 'right' ? { maxHeight: '5.5rem', margin: '0 auto', display: 'block' } : { maxHeight: '4.81rem', margin: '0 auto', display: 'block' }}
+                        <img src={src} alt={`${index}-logo`} width='auto' height={115}
+                            style={side == 'right' ? { maxHeight: '5.5rem', margin: '0 auto', display: 'block' } : { maxHeight: '5rem', margin: '0 auto', display: 'block' }}
                         />
                     </div>
                 ))}

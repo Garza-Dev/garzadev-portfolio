@@ -27,16 +27,19 @@ const AboutMe: React.FC = () => {
 
     return (
         <section className={`${styles.main}`}>
-            <div className={`${styles.container} container mx-auto`}>
+            <div className={`${styles.container} container mx-auto pr-12 pl-12`}>
                 <div className={styles.iconContainer}>
-                    {/* <img className={styles.pixelArtTop} src={iconPipeIMG.src} alt='Icon-Pipe' width={144} height={114} /> */}
+                    <img className={styles.pixelArtTop} src={iconPipeIMG.src} alt='Icon-Pipe' width={144} height={114} />
                     <div className={styles.logosContainer}>
                         <LogoSlider images={leftLogos} side='right'/>
                     </div>
-                    {/* <img className={styles.pixelArtBtm} src={iconPipeIMG.src} alt='Icon-Pipe' width={144} height={114} /> */}
+                    <img className={styles.pixelArtBtm} src={iconPipeIMG.src} alt='Icon-Pipe' width={144} height={114} />
                 </div>
                 <div className={styles.content}>
                     <h1 className={styles.heading}>About Me</h1>
+                    <svg className={styles.underline} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 1" preserveAspectRatio="none">
+                        <line x1="1" y1="0" x2="32" y2="0" stroke="#FE5F55" strokeWidth="0.6"/>
+                    </svg>
                     <p>
                         Very long text goes here copy and paste this
                         Very long text goes here copy and paste this
@@ -53,7 +56,7 @@ const AboutMe: React.FC = () => {
                 <div className={styles.iconContainer}>
                     <img className={styles.pixelArtTop} src={iconPipeIMG.src} alt='Icon-Pipe' width={64} height={64} />
                     <div className={styles.logosContainer}>
-                        {/* <LogoSlider images={rightLogos} side='left'/> */}
+                        <LogoSlider images={rightLogos} side='left'/>
                     </div>
                     <img className={styles.pixelArtBtm} src={iconPipeIMG.src} alt='Icon-Pipe' width={64} height={64} />
                 </div>

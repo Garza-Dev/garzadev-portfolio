@@ -21,13 +21,19 @@
 }
 
 .heading {
-    padding: 0.8rem;
+    padding-left: 0.8rem;
+    margin-bottom: 0;
     font-size: 4rem;
     font-family: 'SpartanRegular';
     font-weight: normal;
     color: #fff;
     text-shadow: -2px 2px 2px #FE5F55;
     text-align: start;
+}
+
+.underline {
+    margin-bottom: 10px;
+    margin-top: -20px;
 }
 
 .iconContainer {
