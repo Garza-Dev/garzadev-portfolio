@@ -1,0 +1,18 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(90deg, rgba(44,54,85,1) 28%, rgba(24,36,55,1) 75%);
+    padding-top: 2rem;
+}
+
+.heading {
+    font-size: 4rem;
+    font-family: 'SpartanRegular';
+    font-weight: normal;
+    color: #fff;
+    text-shadow: -2px 2px 2px #FE5F55;
+    text-align: center;
+}

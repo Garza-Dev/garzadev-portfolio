@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import EduardoGarzaIMG from '../../../public/Eduardo-Garza.jpg';
 import styles from './Hero.module.css';
 import Waves from '../Waves/Waves';
 
@@ -17,7 +14,7 @@ const Hero: React.FC = () => {
                     <p className={`${styles.heroTxt} ${styles.fadeInFromBottom}`}>Game Developer | Full-Stack Developer | Musician</p>
                 </div>
                 <div className={styles.imgContainer}>
-                    <Image src={EduardoGarzaIMG.src} layout='fill' objectFit='cover' alt='Eduardo Garza' />
+                    <img src="/images/Eduardo-Garza.jpg" alt='Eduardo Garza' style={{objectFit: 'cover'}} />
                 </div>
             </div>
 
