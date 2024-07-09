@@ -13,6 +13,11 @@ const Projects: React.FC = () => {
         <section className={styles.main}>
             <div className='container'>
                 <h1 className={styles.heading}>Projects</h1>
+                <div className={styles.cardContainer}>
+                    <div className={styles.card}>
+                        <h1 className={styles.cardTitle}>The Den</h1>
+                    </div>
+                </div>
             </div>
         </section>
     )
