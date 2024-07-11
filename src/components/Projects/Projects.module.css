@@ -5,7 +5,25 @@
     flex-direction: column;
     position: relative;
     background: linear-gradient(90deg, rgba(44,54,85,1) 28%, rgba(24,36,55,1) 75%);
-    padding-top: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    
+    border-radius: 25px;
+    margin-top: 0.8rem;
+    background: linear-gradient(180deg, #f0f4f8 0%, #d9e2ec 100%);
 }
 
 .heading {
@@ -17,29 +35,24 @@
     text-align: center;
 }
 
-.cardContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+.projectImage {
+    border-radius: 25px;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    border: 5px solid #FE5F55;
-    border-radius: 35px;
-    padding: 20%;
+.contentBody {
+    margin: 0.8rem;
+    text-align: center;
+    color:rgba(24,36,55,1);
+    font-family: 'SpartanRegular';
+    font-weight: normal;
 }
 
 .cardTitle {
-    margin-top: 1rem;
-    text-align: center;
-    font-family: 'SpartanRegular';
-    font-weight: normal;
-    font-size: 2.5rem;
-    color: #fff;
+    font-size: 3.5rem;
+    text-shadow: -2px 2px 2px #FE5F55;
+}
+
+.cardSubTitle {
+    font-size: 1.4rem;
+    margin-top: 18px;
 }

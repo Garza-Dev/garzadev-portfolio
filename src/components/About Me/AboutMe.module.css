@@ -19,14 +19,6 @@
     text-align: center;
 }
 
-.body {
-    font-family: 'SpartanRegular';
-    font-weight: normal;
-    font-size: 1.1rem;
-    color: #fff;
-    text-align: left;
-}
-
 .heading {
     padding-left: 0.8rem;
     margin-bottom: 0;
@@ -38,6 +30,13 @@
     text-align: start;
 }
 
+.body {
+    font-family: 'SpartanRegular';
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: left;
+}
 
 .iconContainer {
     margin: 0.8rem;

@@ -25,7 +25,7 @@ const AboutMe: React.FC = () => {
     ];
 
     return (
-        <section className={styles.main}>
+        <section className={`${styles.main} min-h-screen`}>
             <div className={`${styles.container} container mx-auto pr-12 pl-12`}>
                 <div className={styles.iconContainer}>
                     <img className={styles.pixelArtTop} src='/images/iconPipe.png' alt='Icon-Pipe' width={144} height={114} />
