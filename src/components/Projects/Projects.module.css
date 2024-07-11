@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    background: linear-gradient(90deg, rgba(44,54,85,1) 28%, rgba(24,36,55,1) 75%);
+    background: linear-gradient(90deg, rgba(44, 54, 85, 1) 28%, rgba(24, 36, 55, 1) 75%);
 }
 
 .container {
@@ -12,18 +12,6 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-}
-
-.card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    flex-direction: row;
-    
-    border-radius: 25px;
-    margin-top: 0.8rem;
-    background: linear-gradient(180deg, #f0f4f8 0%, #d9e2ec 100%);
 }
 
 .heading {
@@ -35,24 +23,8 @@
     text-align: center;
 }
 
-.projectImage {
-    border-radius: 25px;
-}
-
-.contentBody {
-    margin: 0.8rem;
-    text-align: center;
-    color:rgba(24,36,55,1);
-    font-family: 'SpartanRegular';
-    font-weight: normal;
-}
-
-.cardTitle {
-    font-size: 3.5rem;
-    text-shadow: -2px 2px 2px #FE5F55;
-}
-
-.cardSubTitle {
-    font-size: 1.4rem;
-    margin-top: 18px;
+.dPad {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
 }
