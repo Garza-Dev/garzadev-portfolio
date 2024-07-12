@@ -5,13 +5,15 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from 'react';
 import ProjectCard_TheDen from './The Den/ProjectCard';
 import ProjectCard_TheBound from './The Bound/ProjectCard';
+import ProjectCard_SMS from './Scrap Management System/ProjectCard';
 
 const Projects: React.FC = () => {
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
     const [fade, setFade] = useState(true);
     const projects = [
         <ProjectCard_TheDen />,
-        <ProjectCard_TheBound />
+        <ProjectCard_TheBound />,
+        <ProjectCard_SMS />
     ]
 
     useEffect(() => {

@@ -27,7 +27,7 @@ const ProjectCard_TheDen: React.FC = () => {
 
     return (
         <div className={styles.card}>
-            <img src={images[currentImageIndex]} alt='TheDen1' width="55%" height="auto" className={`mx-5 ${styles.projectImage}`}
+            <img src={images[currentImageIndex]} alt={`TheDen-${currentImageIndex}`} width="55%" height="auto" className={`mx-5 ${styles.projectImage}`}
                 style={fade ? { opacity: '1', transition: 'opacity 0.4s ease-in' } :
                     { opacity: '0', transition: 'opacity 0.4s ease-out' }}
             />
