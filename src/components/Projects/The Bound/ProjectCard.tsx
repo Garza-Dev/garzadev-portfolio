@@ -2,27 +2,35 @@
 import styles from '../ProjectCard.module.css'
 import { useEffect, useState } from 'react';
 import { GoHorizontalRule } from 'react-icons/go';
+import Link from 'next/link';
 
 const ProjectCard_TheBound: React.FC = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [fade, setFade] = useState(true);
     const images = [
-        '/projectImages/The Den/The Den - 1.png',
-        '/projectImages/The Den/The Den - 2.png',
-        '/projectImages/The Den/The Den - 3.png',
-        '/projectImages/The Den/The Den - 4.png',
+        '/projectImages/The Bound/The Bound - 1.jpg',
+        '/projectImages/The Bound/The Bound - 2.png',
+        '/projectImages/The Bound/The Bound - 3.png'
     ];
 
     useEffect(() => {
-        const imageInterval = setInterval(() => {
+        const changeImage = () => {
             setFade(false);
             setTimeout(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
                 setFade(true);
-            }, 1000); // half of the duration to allow fade out and fade in
-        }, 5000);
+            }, 1000); // fade duration
+        };
 
-        return () => clearInterval(imageInterval);
+        const interval = setInterval(changeImage, 8000); // duration between image changes
+
+        // Change image immediately on mount
+        const timeout = setTimeout(changeImage, 8000);
+
+        return () => {
+            clearInterval(interval);
+            clearTimeout(timeout);
+        };
     }, []);
 
     return (
@@ -45,19 +53,23 @@ const ProjectCard_TheBound: React.FC = () => {
             </p>
             <div className={styles.contentBody}>
                 <h1 className={styles.cardTitle}>The Bound</h1>
-                <p>-</p>
+                <p>This indie horror game I developed has a total of 14k views over 3 devlogs on my YouTube channel!</p>
                 <br />
-                <p>----
+                <div className='flex justify-center items-center'>
+                    <a href="https://www.youtube.com/@TheCaptlesPRO" target="_blank" rel="noopener noreferrer">
+                    <img src='/logos/youtubeLogo.png' alt='youtubelogo' width={75} height='auto' />
+                    </a>
+                    <p style={{ marginLeft: '2%' }}>Check out my channel for more info!</p>
+                </div>
+                <br />
+                <p>I am passionate about creating memorable gaming experiences and continuously improving my skills.
+                    I am eager to bring my creativity, technical expertise, and dedication to any game development team.
                 </p>
-                <br />
-                <p>----</p>
-                <p>----</p>
                 <h1 className={styles.cardSubTitle}><span style={{ color: '#FE5F55' }}>Technologies Used</span></h1>
                 <div className='flex justify-center align-center pt-4'>
-                    <img src='/logos/reactLogo.png' alt='reactlogo' width={75} height={75} />
-                    <img src='/logos/Next.js.png' alt='nextjslogo' width={90} height={75} />
-                    <img src='/logos/sqlLogo.png' alt='sqllogo' width={75} height={75} />
-                    <img src='/logos/azureLogo.png' alt='azurelogo' width={75} height={75} />
+                    <img src='/logos/unityLogo.png' alt='unitylogo' width={75} height={75} />
+                    <img src='/logos/vsLogo.png' alt='vslogo' width={120} height='auto' />
+                    <img src='/logos/photoshopLogo.png' alt='photoshoplogo' width={75} height={75} />
                 </div>
             </div>
         </div>

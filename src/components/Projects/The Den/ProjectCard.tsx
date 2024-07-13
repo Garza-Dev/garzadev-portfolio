@@ -14,15 +14,23 @@ const ProjectCard_TheDen: React.FC = () => {
     ];
 
     useEffect(() => {
-        const imageInterval = setInterval(() => {
+        const changeImage = () => {
             setFade(false);
             setTimeout(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
                 setFade(true);
-            }, 1000); // half of the duration to allow fade out and fade in
-        }, 5000);
+            }, 1000); // fade duration
+        };
 
-        return () => clearInterval(imageInterval);
+        const interval = setInterval(changeImage, 8000); // duration between image changes
+
+        // Change image immediately on mount
+        const timeout = setTimeout(changeImage, 8000);
+
+        return () => {
+            clearInterval(interval);
+            clearTimeout(timeout);
+        };
     }, []);
 
     return (
@@ -45,15 +53,12 @@ const ProjectCard_TheDen: React.FC = () => {
             </p>
             <div className={styles.contentBody}>
                 <h1 className={styles.cardTitle}>The Den</h1>
-                <p>Reporting Web Application that greatly improves efficiency reducing generation time from several hours to seconds.</p>
+                <p>Reporting Web Application that greatly improves efficiency reducing report generation time from several hours to seconds.</p>
                 <br />
                 <p>This web application generates dynamic reports based on user input.
                     It enhances the company's ability to efficiently analyze sales performance,
                     leading to improved overall productivity.
                 </p>
-                <br />
-                <p>Deployed on Azure Web App Service for scalability and security.</p>
-                <p>Accessible from any device, ensuring on-the-go productivity.</p>
                 <h1 className={styles.cardSubTitle}><span style={{ color: '#FE5F55' }}>Technologies Used</span></h1>
                 <div className='flex justify-center align-center pt-4'>
                     <img src='/logos/reactLogo.png' alt='reactlogo' width={75} height={75} />

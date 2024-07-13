@@ -13,22 +13,30 @@ const ProjectCard_SMS: React.FC = () => {
     ];
 
     useEffect(() => {
-        const imageInterval = setInterval(() => {
+        const changeImage = () => {
             setFade(false);
             setTimeout(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
                 setFade(true);
-            }, 1000); // half of the duration to allow fade out and fade in
-        }, 5000);
+            }, 1000); // fade duration
+        };
 
-        return () => clearInterval(imageInterval);
+        const interval = setInterval(changeImage, 8000); // duration between image changes
+
+        // Change image immediately on mount
+        const timeout = setTimeout(changeImage, 8000);
+
+        return () => {
+            clearInterval(interval);
+            clearTimeout(timeout);
+        };
     }, []);
 
     return (
         <div className={styles.card}>
             <img src={images[currentImageIndex]} alt={`SMS-${currentImageIndex}`} width="55%" height="auto" className={`mx-5 ${styles.projectImage}`}
-                style={fade ? { opacity: '1', transition: 'opacity 0.4s ease-in' } :
-                    { opacity: '0', transition: 'opacity 0.4s ease-out' }}
+                style={fade ? { opacity: '1', transition: 'opacity 1s ease-in' } :
+                    { opacity: '0', transition: 'opacity 1s ease-out' }}
             />
             <p className='flex' style={{ position: 'absolute', bottom: '8px', textAlign: 'center', right: '66%' }}>
                 {images.map((_, index) => (
@@ -44,21 +52,17 @@ const ProjectCard_SMS: React.FC = () => {
             </p>
             <div className={styles.contentBody}>
                 <h1 className={styles.cardTitle}>Scrap Management System</h1>
-                <p></p>
+                <p>The system captures and displays real-time scrap data. 
+                    The implementation of this scrap system has resulted in a significant reduction in scrap-related costs, improving the company's bottom line.</p>
                 <br />
-                <p>This web application generates dynamic reports based on user input.
-                    It enhances the company's ability to efficiently analyze sales performance,
-                    leading to improved overall productivity.
-                </p>
-                <br />
-                <p>Deployed on Azure Web App Service for scalability and security.</p>
-                <p>Accessible from any device, ensuring on-the-go productivity.</p>
+                <p>I used Angular for the frontend and ASP.NET Core for the backend, along with the powerful capabilities of SQL Server. 
+                    The application meets the high standards of performance, security, and reliability required by modern manufacturing environments</p>
                 <h1 className={styles.cardSubTitle}><span style={{ color: '#FE5F55' }}>Technologies Used</span></h1>
                 <div className='flex justify-center align-center pt-4'>
-                    <img src='/logos/reactLogo.png' alt='reactlogo' width={75} height={75} />
-                    <img src='/logos/Next.js.png' alt='nextjslogo' width={90} height={75} />
+                    <img src='/logos/angularLogo.png' alt='angularlogo' width={75} height={75} />
+                    <img src='/logos/netframeworkLogo.png' alt='netlogo' width={110} height={75} />
                     <img src='/logos/sqlLogo.png' alt='sqllogo' width={75} height={75} />
-                    <img src='/logos/azureLogo.png' alt='azurelogo' width={75} height={75} />
+                    <img src='/logos/vsLogo.png' alt='vslogo' width={95} height={75} />
                 </div>
             </div>
         </div>
