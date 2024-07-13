@@ -3,6 +3,10 @@ import styles from '../ProjectCard.module.css'
 import { useEffect, useState } from 'react';
 import { GoHorizontalRule } from 'react-icons/go';
 
+export const getSlideshowDuration = () => {
+    return (8000 * 4); //4 images each 8 seconds long
+}
+
 const ProjectCard_TheDen: React.FC = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [fade, setFade] = useState(true);
@@ -14,30 +18,22 @@ const ProjectCard_TheDen: React.FC = () => {
     ];
 
     useEffect(() => {
-        const changeImage = () => {
+        const imageInterval = setInterval(() => {
             setFade(false);
             setTimeout(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
                 setFade(true);
-            }, 1000); // fade duration
-        };
+            }, 1000); // half of the duration to allow fade out and fade in
+        }, 8000);
 
-        const interval = setInterval(changeImage, 8000); // duration between image changes
-
-        // Change image immediately on mount
-        const timeout = setTimeout(changeImage, 8000);
-
-        return () => {
-            clearInterval(interval);
-            clearTimeout(timeout);
-        };
+        return () => clearInterval(imageInterval);
     }, []);
 
     return (
         <div className={styles.card}>
             <img src={images[currentImageIndex]} alt={`TheDen-${currentImageIndex}`} width="55%" height="auto" className={`mx-5 ${styles.projectImage}`}
-                style={fade ? { opacity: '1', transition: 'opacity 0.4s ease-in' } :
-                    { opacity: '0', transition: 'opacity 0.4s ease-out' }}
+                style={fade ? { opacity: '1', transition: 'opacity 1s ease-in' } :
+                    { opacity: '0', transition: 'opacity 1s ease-out' }}
             />
             <p className='flex' style={{ position: 'absolute', bottom: '8px', textAlign: 'center', right: '66%' }}>
                 {images.map((_, index) => (

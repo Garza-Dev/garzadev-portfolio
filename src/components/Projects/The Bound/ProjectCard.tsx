@@ -2,7 +2,10 @@
 import styles from '../ProjectCard.module.css'
 import { useEffect, useState } from 'react';
 import { GoHorizontalRule } from 'react-icons/go';
-import Link from 'next/link';
+
+export const getSlideshowDuration = () => {
+    return (8000 * 3); //3 images each 8 seconds long
+}
 
 const ProjectCard_TheBound: React.FC = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -14,30 +17,22 @@ const ProjectCard_TheBound: React.FC = () => {
     ];
 
     useEffect(() => {
-        const changeImage = () => {
+        const imageInterval = setInterval(() => {
             setFade(false);
             setTimeout(() => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
                 setFade(true);
-            }, 1000); // fade duration
-        };
+            }, 1000); // half of the duration to allow fade out and fade in
+        }, 8000);
 
-        const interval = setInterval(changeImage, 8000); // duration between image changes
-
-        // Change image immediately on mount
-        const timeout = setTimeout(changeImage, 8000);
-
-        return () => {
-            clearInterval(interval);
-            clearTimeout(timeout);
-        };
+        return () => clearInterval(imageInterval);
     }, []);
 
     return (
         <div className={styles.card}>
-            <img src={images[currentImageIndex]} alt='TheDen1' width="55%" height="auto" className={`mx-5 ${styles.projectImage}`}
-                style={fade ? { opacity: '1', transition: 'opacity 0.4s ease-in' } :
-                    { opacity: '0', transition: 'opacity 0.4s ease-out' }}
+            <img src={images[currentImageIndex]} alt={`TheBound-${currentImageIndex}`}width="55%" height="auto" className={`mx-5 ${styles.projectImage}`}
+                style={fade ? { opacity: '1', transition: 'opacity 1s ease-in' } :
+                    { opacity: '0', transition: 'opacity 1s ease-out' }}
             />
             <p className='flex' style={{ position: 'absolute', bottom: '8px', textAlign: 'center', right: '66%' }}>
                 {images.map((_, index) => (
@@ -57,7 +52,7 @@ const ProjectCard_TheBound: React.FC = () => {
                 <br />
                 <div className='flex justify-center items-center'>
                     <a href="https://www.youtube.com/@TheCaptlesPRO" target="_blank" rel="noopener noreferrer">
-                    <img src='/logos/youtubeLogo.png' alt='youtubelogo' width={75} height='auto' />
+                        <img src='/logos/youtubeLogo.png' alt='youtubelogo' width={75} height='auto' />
                     </a>
                     <p style={{ marginLeft: '2%' }}>Check out my channel for more info!</p>
                 </div>
