@@ -7,7 +7,6 @@ import ProjectCard_TheDen, { getSlideshowDuration as getDenDuration } from './Th
 import ProjectCard_TheBound, { getSlideshowDuration as getBoundDuration } from './The Bound/ProjectCard';
 import ProjectCard_SMS, { getSlideshowDuration as getSMSDuration } from './Scrap Management System/ProjectCard';
 import ProjectCard_MaggieGarza, { getSlideshowDuration as getMaggieDuration } from './Maggie Garza/ProjectCard';
-import ProgressBar from '../Progress Bar/ProgressBar';
 
 const Projects: React.FC = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -63,7 +62,6 @@ const Projects: React.FC = () => {
           <img src='/images/JoyCon D-Pad Right.svg' alt='D-PadRight' className={styles.dPad} onClick={handleNextProject} />
         </div>
       </div>
-      <ProgressBar />
     </section>
   )
 }
