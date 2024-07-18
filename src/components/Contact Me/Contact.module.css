@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    background: linear-gradient(90deg, rgba(44, 54, 85, 1) 28%, rgba(24, 36, 55, 1) 75%);
+    background: linear-gradient(0deg, #f0f4f8 0%, #d9e2ec 100%);
 }
 
 .container {
@@ -12,20 +12,20 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin-bottom: 10%;
 }
 
-.heading {
-    font-size: 4rem;
-    font-family: 'SpartanRegular';
-    font-weight: normal;
-    color: #fff;
-    text-shadow: -2px 2px 2px #FE5F55;
+.content {
+    flex: 1;
     text-align: center;
 }
 
-.dPad {
-    width: 120px;
-    height: 120px;
-    cursor: pointer;
+.heading {
+    padding-left: 0.8rem;
+    margin-bottom: 0;
+    font-size: 4rem;
+    font-family: 'SpartanRegular';
+    font-weight: normal;
+    color: rgba(44,54,85,1);
+    text-shadow: -2px 2px 2px #FE5F55;
+    text-align: start;
 }
