@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Projects from "@/components/Projects/Projects";
 import ContactMe from "@/components/Contact Me/Contact";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   // useEffect(() => {
@@ -24,6 +25,7 @@ export default function Home() {
       <AboutMe />
       <Projects />
       <ContactMe />
+      <Footer />
     </>
   );
 }

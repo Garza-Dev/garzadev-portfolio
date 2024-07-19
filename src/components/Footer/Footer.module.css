@@ -1,0 +1,35 @@
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(90deg, rgba(44,54,85,1) 28%, rgba(24,36,55,1) 75%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.content {
+    text-align: center;
+}
+
+.heading {
+    font-family: 'SpartanRegular';
+    font-weight: normal;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: -2px 2px 2px #FE5F55;
+}
+
+.link {
+    padding-left: 8px;
+    font-family: 'SpartanRegular';
+    font-weight: normal;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: underline 2px solid #fff;
+}

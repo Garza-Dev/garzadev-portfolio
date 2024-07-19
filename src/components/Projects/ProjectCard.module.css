@@ -7,6 +7,7 @@
     border-radius: 25px;
     background: linear-gradient(180deg, #f0f4f8 0%, #d9e2ec 100%);
     height: min-content;
+    padding: 1rem;
 }
 
 .projectImage {

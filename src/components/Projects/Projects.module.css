@@ -24,8 +24,8 @@
     text-align: center;
 }
 
-.dPad {
-    width: 120px;
-    height: 120px;
+.arrows {
+    font-size: 9rem;
+    color: #fff;
     cursor: pointer;
 }

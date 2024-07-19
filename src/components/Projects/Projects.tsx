@@ -8,6 +8,8 @@ import ProjectCard_TheBound, { getSlideshowDuration as getBoundDuration } from '
 import ProjectCard_SMS, { getSlideshowDuration as getSMSDuration } from './Scrap Management System/ProjectCard';
 import ProjectCard_MaggieGarza, { getSlideshowDuration as getMaggieDuration } from './Maggie Garza/ProjectCard';
 import WavesLight from '../Waves/WavesLight';
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const Projects: React.FC = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -59,9 +61,9 @@ const Projects: React.FC = () => {
         <h1 data-aos="fade-down" className={styles.heading}>Projects</h1>
         <div className={`${styles.container} container mx-auto pr-12 pl-12`}>
           <div data-aos="fade-right" className='flex justify-center items-center'>
-            <img src='/images/JoyCon D-Pad Left.svg' alt='D-PadLeft' className={styles.dPad} onClick={handlePreviousProject} />
+            <MdKeyboardArrowLeft className={styles.arrows} style={{ filter: 'drop-shadow(2px 2px 2px #FE5F55)' }} onClick={handlePreviousProject}/>
             {projects[currentProjectIndex].component}
-            <img src='/images/JoyCon D-Pad Right.svg' alt='D-PadRight' className={styles.dPad} onClick={handleNextProject} />
+            <MdKeyboardArrowRight className={styles.arrows} style={{ filter: 'drop-shadow(-2px 2px 2px #FE5F55)' }} onClick={handleNextProject}/>
           </div>
         </div>
       </div>
