@@ -29,7 +29,7 @@ const ProjectCard_TheBound: React.FC = () => {
     }, []);
 
     return (
-        <div className={styles.card}>
+        <div className={`${styles.card} h-128`}>
             <img src={images[currentImageIndex]} alt={`TheBound-${currentImageIndex}`}width="55%" height="auto" className={`mx-5 ${styles.projectImage}`}
                 style={fade ? { opacity: '1', transition: 'opacity 1s ease-in' } :
                     { opacity: '0', transition: 'opacity 1s ease-out' }}

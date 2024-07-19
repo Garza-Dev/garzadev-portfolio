@@ -2,7 +2,16 @@ import styles from './Contact.module.css';
 import { FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import Waves from '../Waves/Waves';
+
+const VerticalLine: React.FC = () => {
+    return (
+        <svg height="100" width="2" style={{ margin: '0 auto', display: 'block' }}>
+            <line x1="1" y1="0" x2="1" y2="100" style={{ stroke: '#FE5F55', strokeWidth: '2' }} />
+        </svg>
+    );
+}
 
 const ContactMe: React.FC = () => {
     return (
@@ -29,10 +38,17 @@ const ContactMe: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.iconContainer}>
-                    <div className={styles.verticalIconBarTop}></div>
-                    <FaGithub fontSize={32}/>
-                    <div className={styles.verticalIconBarBottom}></div>
+                <div data-aos="fade-left" className='flex flex-col'>
+                    <VerticalLine />
+                    <div className={styles.iconContainer}>
+                        <a href='https://github.com/Garza-Dev' target="_blank" rel="noopener noreferrer">
+                            <FaGithub fontSize={32} color='black' />
+                        </a>
+                        <a href='https://www.youtube.com/@TheCaptlesPRO' target="_blank" rel="noopener noreferrer">
+                        <FaYoutube fontSize={32} color='#FF0000' />
+                        </a>
+                    </div>
+                    <VerticalLine />
                 </div>
             </div>
 

@@ -10,13 +10,13 @@ const Navbar: React.FC = () => {
             <nav className='flex justify-end px-8'>
                 <ul className='flex space-x-15'>
                     <li>
-                        <Link href="/about" className={styles.navTxt}><span>About Me</span></Link>
+                        <Link href="#aboutMe" className={styles.navTxt}><span>About Me</span></Link>
                     </li>
                     <li>
-                        <Link href="/projects" className={styles.navTxt}><span>Projects</span></Link>
+                        <Link href="#projects" className={styles.navTxt}><span>Projects</span></Link>
                     </li>
                     <li>
-                        <Link href="/contact" className={styles.navTxt}><span>Contact</span></Link>
+                        <Link href="#contactMe" className={styles.navTxt}><span>Contact</span></Link>
                     </li>
                     <li>
                         <Link href="/resume" className={styles.navTxt}><span>Resume</span></Link>
